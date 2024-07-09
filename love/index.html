@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>520表白</title>
+    <style>
+        @keyframes heartBeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(0.9); }
+            100% { transform: scale(1); }
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://i.imgur.com/4E2Dx7t.png'), url('https://i.imgur.com/3AI6WUY.png');
+            background-repeat: repeat;
+            background-color: #f0e0d8;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 90px;
+            animation: heartBeat 1s infinite;
+        }
+
+        .heart:before,
+        .heart:after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 80px;
+            background: linear-gradient(45deg, #ff6666, #ff99cc);
+            border-radius: 50px 50px 0 0;
+            transform: rotate(-45deg);
+            top: 0;
+            left: 50px;
+        }
+
+        .heart:after {
+            left: 0;
+            transform: rotate(45deg);
+        }
+
+        .text {
+            animation: float 6s ease-in-out infinite;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+            font-size: 36px;
+            font-family: 'Courgette', cursive;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(-50%) translateX(-10px); }
+            50% { transform: translateY(-50%) translateX(10px); }
+            100% { transform: translateY(-50%) translateX(-10px); }
+        }
+    </style>
+</head>
+<body>
+<div class="heart"></div>
+<div class="text">520 I Love You</div>
+</body>
+</html>
